@@ -20,10 +20,14 @@ Usaremos este tipo de archivo como nuestro bloc de notas dentro de nuestro curso
 
 ### Como aplicamos este tipo de lenguaje? 
 
-Dentro de una carpeta que quieras documentar algo, tienes que crear un archivo y ponerle un ".md" al final. 
+Dentro de una carpeta que quieras documentar algo, tienes que crear un archivo y ponerle un **".md"** al final. 
 
 Ejemplo
 
 > Dentro de una carpeta que se llame proyecto1
 >
 > Crearemos un archivo que se llame **readMe.md**
+
+
+
+## Syntax de como escribir este lenguaje 
