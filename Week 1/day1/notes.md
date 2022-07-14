@@ -7,7 +7,7 @@ Es un lenguaje de formateo/edicion para añadir elementos de texto a documentos.
 
 ### Por que es tan importante aprender a usar este tipo de lenguaje de Markdown?
 
-Universalmente somos especie de procesos, al poder documentar nuestros logros y nuestras derotas hemos podido progresar universalemente como humanidad. Traigo esta analogía a la clase porque el lenguaje markdown actua como nuestro proceso de documentacion que estaremos usando durante nuestro curso. 
+Universalmente somos una especie de procesos, al poder documentar nuestros logros y nuestras derotas hemos podido progresar universalemente como humanidad. Traigo esta analogía a la clase porque el lenguaje markdown actua como nuestro proceso de documentacion que estaremos usando durante nuestro curso. 
 
 Soy un partidario que desde el dia 0 tratemos este curso como una ventana a como se trabaja en la vida real o por lo menos en un escenario utopico. Sera tedioso al principio pero, me agradeceran al futuro. 
 
@@ -26,4 +26,4 @@ Ejemplo
 
 > Dentro de una carpeta que se llame proyecto1
 >
-> Crearemos un archivo que se llame readMe.md
+> Crearemos un archivo que se llame **readMe.md**
