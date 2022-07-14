@@ -42,4 +42,4 @@ Los headings o titulos se denominan desde H1 - H6. Se diferencian en este syntax
 
 Agrega un **#** antes de lo que quieras escribir para generar un heading/titulo tipo H1
 
-# Headling1 
+# Headling1 -- Se escribiria # Heading1
