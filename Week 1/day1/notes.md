@@ -31,3 +31,15 @@ Ejemplo
 
 
 ## Syntax de como escribir este lenguaje 
+
+Veamos un poco del syntaxt 
+
+### Headings 
+
+Los headings o titulos se denominan desde H1 - H6. Se diferencian en este syntax con un **#**
+
+**Ejemplo**
+
+Agrega un **#** antes de lo que quieras escribir para generar un heading/titulo tipo H1
+
+# Headling1 
