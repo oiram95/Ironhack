@@ -42,12 +42,12 @@ Los headings o titulos se denominan desde H1 - H6. Se diferencian en este syntax
 
 Agrega un **#** antes de lo que quieras escribir para generar un heading/titulo tipo H1
 
-# Headling1  
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5 
-###### Heading6 
+> # Headling1  
+> ## Heading2
+> ### Heading3
+> #### Heading4
+> ##### Heading5 
+> ###### Heading6 
 
 
 ### Parrafos o Paragraprhs
@@ -64,9 +64,9 @@ Para escribir cursiva dentro de este tipo de archivo usamos un **#** o un **_** 
 
 **Ejemplo**
 
-Me encanta el *Hip Hop* 
+> Me encanta el *Hip Hop* 
 
-Me encanta el _Hip Hop_
+> Me encanta el _Hip Hop_
 
 #### Peso
 
@@ -74,9 +74,9 @@ Para escribir cursiva dentro de este tipo de archivo usamos un **2*** **2** **_*
 
 **Ejemplo**
 
-Me encanta el **Hip Hop** 
+> Me encanta el **Hip Hop** 
 
-Me encanta el __Hip Hop__
+> Me encanta el __Hip Hop__
 
 #### Blockquotes 
 
@@ -85,6 +85,23 @@ Para crear un blockquote, añadimos un **>** antes de empezar una line de parraf
 **Ejemplo**
 
 > Me encanta el __Hip Hop__
+
+
+#### Codigo 
+
+Las lineas de codigo son indentadas 4 espacios o el equivalente a un **tabular**. Si el codigo esta dentro de una lista se indentaran 8 espacios. 
+
+**Ejemplo** 
+
+1. Abre el archivo index.html
+2. Escribe el codigo siguiente: 
+
+<html>
+<head>
+Wu Tang Financial
+</head>
+</html>
+
 
 #### Aca podemos ver una [lista entera del syntax que compone Markdown](https://www.markdownguide.org/basic-syntax)
 
