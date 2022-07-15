@@ -97,9 +97,9 @@ Las lineas de codigo son indentadas 4 espacios o el equivalente a un **tabular**
 2. Escribe el codigo siguiente: 
 
                 <html>
-                <head>
-                Wu Tang Financial
-                </head>
+                    <head>
+                        Wu Tang Financial
+                    </head>
                 </html>
 
 
