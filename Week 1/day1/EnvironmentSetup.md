@@ -45,3 +45,13 @@ Mac Users - steps
 Everyday they are required to delete their browsing history i order to speed up the machine. 
 
 #### Chrome Add-Ons
+
+
+
+**[GoFullPage](https://chrome.google.com/webstore/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl)**
+
+**[JSON Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)**
+
+**[Wappalyzer Tech Profiler](https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg)**
+
+
