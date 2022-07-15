@@ -96,11 +96,11 @@ Las lineas de codigo son indentadas 4 espacios o el equivalente a un **tabular**
 1. Abre el archivo index.html
 2. Escribe el codigo siguiente: 
 
-<html>
-<head>
-Wu Tang Financial
-</head>
-</html>
+                <html>
+                <head>
+                Wu Tang Financial
+                </head>
+                </html>
 
 
 #### Aca podemos ver una [lista entera del syntax que compone Markdown](https://www.markdownguide.org/basic-syntax)
