@@ -32,11 +32,11 @@ Ejemplo
 
 ## Syntax de como escribir este lenguaje 
 
-Veamos un poco del syntaxt 
+Veamos un poco del syntax que compone este lenguaje. 
 
 ### Headings 
 
-Los headings o titulos se denominan desde H1 - H6. Se diferencian en este syntax con un **#**
+Los headings o titulos se denominan desde H1 - H6. Se diferencian en este syntax con un **#** antes de la palabra o frase seguido por un espacio. 
 
 **Ejemplo**
 
@@ -49,6 +49,42 @@ Agrega un **#** antes de lo que quieras escribir para generar un heading/titulo 
 ##### Heading5 
 ###### Heading6 
 
+
+### Parrafos o Paragraprhs
+
+Para escribir parrafos no tenemos que asignar ningun tipo de asterisco o caracter. 
+
+Esto es un parrafo normal escrito! 
+
+Para darle emfasis a este tipo de parrafo podemos usar tanto el peso como la cursiva.
+ 
+#### Cursiva 
+
+Para escribir cursiva dentro de este tipo de archivo usamos un **#** o un **_** antes y despues de cada palabra o frase que queremos usar. 
+
+**Ejemplo**
+
+Me encanta el *Hip Hop* 
+
+Me encanta el _Hip Hop_
+
+#### Peso
+
+Para escribir cursiva dentro de este tipo de archivo usamos un **2*** **2** **_** antes y despues de cada palabra o frase que queremos usar. 
+
+**Ejemplo**
+
+Me encanta el **Hip Hop** 
+
+Me encanta el __Hip Hop__
+
+#### Blockquotes 
+
+Para crear un blockquote, añadimos un **>** antes de empezar una line de parrafos
+
+**Ejemplo**
+
+> Me encanta el __Hip Hop__
 
 #### Aca podemos ver una [lista entera del syntax que compone Markdown](https://www.markdownguide.org/basic-syntax)
 
