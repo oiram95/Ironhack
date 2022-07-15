@@ -2,7 +2,9 @@
 
 ## Que es el lenguaje Markdown?
 
-Es un lenguaje de formateo/edicion para añadir elementos de texto a documentos. Creador por John Gruber in 2004, es uno de los lenguajes de "markup". Es muy popular diria que el principal lenguaje de markup para escribir documentos dentro de todo tipo projectos de desarrollo que existe en el mundo. Gracias a lo liviano que es, lo hace el lenguaje preferido de todos nosotros.
+Es un lenguaje de formateo/edicion para añadir elementos de texto a documentos. Creado por John Gruber in 2004. Es muy popular diria que el principal lenguaje de markup para escribir documentos dentro de todo tipo projectos de desarrollo que existe en el mundo. Gracias a lo liviano que es, lo hace el lenguaje preferido de todos nosotros.
+
+Lo usaremos tanto en codigo como para nuestras notas :) 
 
 
 ### Por que es tan importante aprender a usar este tipo de lenguaje de Markdown?
