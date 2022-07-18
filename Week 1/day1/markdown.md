@@ -104,6 +104,5 @@ Las lineas de codigo son indentadas 4 espacios o el equivalente a un **tabular**
             </head>
         </html>
 
-
 #### Aca podemos ver una [lista entera del syntax que compone Markdown](https://www.markdownguide.org/basic-syntax)
 
