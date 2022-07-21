@@ -1,0 +1,248 @@
+* { 
+    margin: 0;
+
+    /* background-color: #0002; */
+    
+}
+
+body {
+    margin: 0;
+    /* padding: 0 2rem; */
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Robot', sans-serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Color CSS */
+
+#by-name{
+    color: forestgreen
+}
+#by-hex{
+    color: #008080; 
+}
+
+#by-rgb{
+    color: rgb(70, 130, 180, 0.4)
+    /* Adding an alpha value to the end of the sequence ranging between 0.0 to 0.9 in order to apply transparency into the colorSequence.  */
+    
+}
+
+/* Fonts CSS */
+
+#font-family{
+    font-family: Arial; 
+}
+
+#font-family-group {
+    font-family: Arial, Verdana, sans-serif, Courier, Lucida, monospace; 
+}
+
+#italic{font-style: italic;}
+#oblique {
+    font-style: oblique;
+}
+
+#bold{font-weight: bold;}
+#numeric{font-weight: 600;}
+#lighter{font-weight: lighter;}
+
+#lowercase{
+    text-transform: lowercase;
+}
+#uppercase{
+    text-transform: uppercase;
+}
+#capitalize{
+    text-transform: capitalize;
+}
+
+#underline{text-decoration: underline;}
+#u-dotted{text-decoration: underline dotted;}
+#u-dotted-blue{
+    text-decoration: underline dotted blue;
+
+}
+#overline{
+    text-decoration: overline;
+}
+#line-through{
+    text-decoration: line-through;
+}
+#wavy{
+    text-decoration: rgb(255, 0, 0) wavy underline;
+}
+
+#center{text-align: center;}
+#right{text-align: right;}
+#left{text-align: left;}
+#justify{
+    text-align: justify;
+}
+
+#indent {
+    text-indent: 40px;
+}
+#line-height {
+    line-height: 16px;
+}
+
+#letter-spacing {
+    letter-spacing: 4px;  
+}
+
+#word-spacing {
+    word-spacing: 200px;
+}
+
+code {
+    padding: 0.8rem 0rem;
+}
+
+/* Containers */
+
+.container-inicial{
+    min-width: 100%;
+    background-color: White;
+    padding: 2rem 1rem;
+    margin-bottom: 20px;
+}
+
+.container-inicial-2 {
+    font-size: 24px;
+}
+
+
+ 
+
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 2rem;
+    letter-spacing: 10px;
+} 
+
+.wuTang {
+    width: 200px;
+    height: 200px;
+    padding: 2rem;
+    /* margin: 20px; */
+    margin: auto;
+    /* margin: 20px 12px 45px 11px; */
+    border: 5px solid red;
+    border-radius: 30px;
+    background-image: url('https://www.iamrap.es/asset/thumbnail,992,558,center,center//media/iamrap/images/2022/02/18/2022021821243880289.png');
+    /* background-position: 0 0; */
+    /* background-repeat: no-repeat;  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.wuTang2 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    padding: 2rem;
+   
+}
+
+.wuTang3{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.wuTang5{
+    box-sizing: border-box;
+    width: 100%;
+    border: solid #5B6DCD 10px;
+    padding: 5px;
+    box-sizing:;
+}
+
+.formInputContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonTest{
+    width: 20px;
+    height: 20px;
+    padding: 1rem;
+    text-align: center;
+    background-color: blue;
+    border-radius: 20px;
+}
+.formLabel{
+    margin: 0 0 4px 0;
+}
+
+
+/* ViewPort Measurements & Values */
+
+/* .aleix {
+    height: 100vh;
+    width: 50vw;
+    background-color: blue;
+} */
+
+.aleix2 {
+    height: 100%;
+    width: 200%;
+    background-color: red;
+    border: solid green 1px;
+}
+
+
+.positionFather {
+background-color: red;
+width: 100vw;
+height: 50vh;
+position: relative;
+padding: 25px;
+}
+
+.pokeImage{
+    width: 100px;
+    height: 100px;
+}
+
+.char1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.char2{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.char3{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.pika{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+

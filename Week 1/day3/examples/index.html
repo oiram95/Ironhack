@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>WuTang Tang Clan</title>
+
+    <!-- Link tag para linkear mi archivo/fichero de CSS/estilos a mi fichero de html :)  -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="example">
+    <div id="container">
+      <nav id="topnav">
+        <a href="index.html">Day 3</a>
+      </nav>
+
+      <!-- CSS Colors -->
+      <!-- <div class="container-inicial">
+        <h1>Colors</h1>
+
+        <h3>Color By Name</h3>
+        <p>
+          The first and easiest way to represent color is by specifying its
+          name. For example, if you want to use the color red, you can write:
+        </p>
+        <code id="by-name">h3 { color: forestgreen; }</code>
+      </div> -->
+
+      <!-- <div class="container-inicial">
+        <h3>Color By Hexidecimal Code</h3>
+        <p>
+          Each hexadecimal value consists of a hash (#) followed by six numbers
+          between 0 and 9 or letters between A and F. Each pair of values
+          represent one of the components (red, green, blue) of the color. This
+          allows you to specify any color.
+        </p>
+        <code id="by-hex">h2 { color: #008080; } </code>
+      </div> -->
+
+      <!-- <div class="container-inicial">
+        <h3>Color By the RGB Method (Red Green Blue)</h3>
+        <p>
+          An RGB value is a method rgb() which receives three parameters: red,
+          green, and blue. They represent the channel values of the colors, just
+          as hexadecimal values do. The difference with RGB notation is that
+          each component is represented by a decimal number between 0 and 255.
+        </p>
+        <code id="by-rgb">p { color: rgb(70, 130, 180); }</code>
+      </div>
+      <div class="container-inicial">
+        <h3>Contrast</h3>
+        <a
+          href="https://webdesign.tutsplus.com/articles/css-tips-for-better-color-and-contrast-accessibility--cms-34472"
+          >Color Contrast</a
+        >
+      </div> -->
+
+      <!-- Fonts -->
+
+      <!-- Example using EM's -->
+
+      <!-- <div class="container-inicial-2">
+        <h1 class="WuTangTang">
+          WuTang Tang Clan Aint nothing to F&%%$^%^%& with!
+        </h1>
+      </div>
+
+      <div class="container-inicial">
+        <h1>Fonts</h1>
+
+        <h3>The most important thing!</h3>
+        <p>
+          Please remember the following: you never have to memorize any of
+          these. You’re free to use online resources, and when you use them
+          often, you will memorize them because of that. Your only goal is to
+          know that they exist and how to find them using Google search.
+        </p>
+        <div>
+          <code>font-family</code>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Font Family</h3>
+        <p>
+          We can change the default values with the font-family property. If we
+          want to change the font on the whole page, we could target it through
+          the body tag and do something like this:
+        </p>
+        <div style="margin-bottom: 2rem">
+          <code id="font-family">h1 { font-family: Arial; }</code>
+          <p></p>
+        </div>
+        <p>
+          The availability of the fonts you want to use on your web pages can’t
+          be guaranteed. That’s why we should always set more than one font
+          family, so our browser has available font stack and multiple choices
+          to pick from.
+        </p>
+        <div>
+          <code id="font-family-group"
+            >h1 { font-family: Arial, Verdana, sans-serif; }</code
+          >
+          <p></p>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Font Size</h3>
+        <p>
+          The font-size is a way to set the size of the font in an HTML
+          document. The font-size is inherited from the element’s (node) parent.
+        </p>
+        <code>usando px </code>
+        <code>usando REM</code>
+        <code>usando EM </code>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Font Size</h3>
+        <p>font-style is used to turn text italic or oblique:</p>
+        <code id="italic">font-style: italic; </code>
+        <code id="oblique">font-style: oblique</code>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Font Weight</h3>
+        <p>
+          The font-weight property is used to turn text bold, bolder or lighter.
+          It can be expressed as a numeric value:
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="bold">font-weight: bold; </code>
+          <code id="numeric">font-weight: 600; </code>
+          <code id="ligther">font-weight: lighter;</code>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Text Transform</h3>
+        <p>
+          The text-transform is used to transform text into lowercase, uppercase
+          or to capitalize the letters:
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="lowercase">text-transform: lowercase;</code>
+          <code id="uppercase">text-transform: uppercase; </code>
+          <code id="capitalize">text-transform: capitalize;</code>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Text Decoration</h3>
+        <p>
+          The text-decoration sets the appearance of decorative lines on text.
+          See the following example:
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="underline"> text-decoration: underline;</code>
+          <code id="u-dotted"> text-decoration: underline dotted; </code>
+          <code id="u-dotted-blue">
+            text-decoration: underline dotted blue;</code
+          >
+          <code style="margin-top: 24px" id="overline"
+            >text-decoration: overline</code
+          >
+          <code id="line-through">text-decoration: line-through</code>
+          <code id="wavy">text-decoration: red wavy underline</code>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Text Align</h3>
+        <p>
+          text-align is used to control text alignment within its containing
+          content box.
+        </p>
+        <div style="display: flex; flex-direction: column; min-width: 100%">
+          <code id="center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cum
+            eos minima velit maiores molestias soluta officiis ipsam sunt, ut et
+            deserunt blanditiis repudiandae placeat ad obcaecati quidem esse.
+            Nobis!</code
+          >
+          <code id="right">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cum
+            eos minima velit maiores molestias soluta officiis ipsam sunt, ut et
+            deserunt blanditiis repudiandae placeat ad obcaecati quidem esse.
+            Nobis!
+          </code>
+          <code id="left">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cum
+            eos minima velit maiores molestias soluta officiis ipsam sunt, ut et
+            deserunt blanditiis repudiandae placeat ad obcaecati quidem esse.
+            Nobis!</code
+          >
+          <code id="justify"
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Perferendis minima fugiat veritatis ratione rerum eveniet, commodi
+            esse labore dignissimos aspernatur quibusdam, dolore recusandae. Aut
+            soluta blanditiis labore corrupti, maiores iusto.</code
+          >
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Text Indent</h3>
+        <p>
+          The text-indent property is used to specify the indentation of the
+          first line of a text.
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="indent">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
+            vel, iusto quia unde repellendus necessitatibus veniam at natus
+            earum a molestias aspernatur dignissimos atque porro eveniet illo
+            eum nesciunt. Blanditiis!</code
+          >
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Line Height</h3>
+        <p>
+          The line-height property is used to set the height of each line of
+          text, both above and below the line.
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="line-height">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, neque
+            laboriosam voluptate nemo eveniet possimus ex quidem ut praesentium,
+            suscipit, architecto consequatur reiciendis. Similique cumque
+            excepturi sint et mollitia corrupti?
+          </code>
+        </div>
+      </div>
+
+      <div class="container-inicial">
+        <h3>Letter Spacing & Word Property</h3>
+        <p>
+          The letter-spacing property is used to specify the space between the
+          characters in a text.
+        </p>
+        <p>
+          The word-spacing property sets the length of space between words and
+          between tags.
+        </p>
+        <div style="display: flex; flex-direction: column">
+          <code id="letter-spacing">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem,
+            dolorem, assumenda cum iure optio nihil laborum voluptatibus magni
+            vitae aliquam minus, asperiores dignissimos voluptas error molestias
+            explicabo nobis necessitatibus fugiat?</code
+          >
+          <code id="word-spacing">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nam
+            corrupti aperiam sed iusto perferendis voluptatibus totam delectus
+            quia recusandae, perspiciatis cum earum. Itaque quaerat, quas
+            laudantium omnis dolor laborum.</code
+          >
+        </div>
+      </div> -->
+
+      <!-- <div class="container-inicial">
+        <h1>Box Model</h1>
+
+        <h3>The most important thing!</h3>
+        <p>
+          In order to fully comprehend CSS-based web design, you have to learn
+          something really basic: every HTML element is a rectangular box.
+        </p>
+        <img
+          src="https://www.csssolid.com/images/box-model/css-box-model.png"
+          alt="Image of Box Model for my students :) - WuTangt Tang Clan aint nothing to fuck with"
+        />
+        <div>
+          <div class="wuTang"></div>
+          <div class="wuTang2">
+            <div><h1>hello</h1></div>
+            <div><h2>goodbye</h2></div>
+          </div>
+        </div>
+        <div>
+          <div class="wuTang3">
+            <div>
+              <img
+                src="https://www.csssolid.com/images/box-model/css-box-model.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Forms -->
+
+      <div class="positionFather">
+        <img
+          class="pokeImage char1"
+          src="https://i.pinimg.com/originals/f2/95/76/f295769d9bd3c34ffc552e837f5304ae.png"
+          alt=""
+        />
+        <img
+          class="pokeImage char2"
+          src="https://i.pinimg.com/originals/f2/95/76/f295769d9bd3c34ffc552e837f5304ae.png"
+          alt=""
+        />
+        <img
+          class="pokeImage pika"
+          src="https://www.pngkey.com/png/full/62-622780_pikachu-descargar-imagenes-de-pokemon.png"
+          alt=""
+        />
+        <img
+          class="pokeImage char3"
+          src="https://i.pinimg.com/originals/f2/95/76/f295769d9bd3c34ffc552e837f5304ae.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
