@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: azure;
+}
+
+.container img {
+    width: 400px;
+    height: 400px
+}
+
+.beyonce{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* @media only screen
+and (min-width : 320px)
+and (max-width : 768px)
+and (orientation : portrait) {
+
+    .wu {
+        display: none;
+    }
+    .beyonce {
+        display: none;
+    }
+} */
+
+.concert-cta {
+    display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    .concert-cta{
+        display: none;
+    }
+}
+
+/* Se declara el syntax del mediaquery usando la sigueint forma: 
+
+@media only screen and (max-width: 320px) {
+    .wu {}
+    #id{}
+    #id .class {}
+    h1,h2,h3,h4 {}
+} */
