@@ -42,6 +42,7 @@ and (orientation : portrait) {
     .concert-cta{
         display: none;
     }
+     
 }
 
 /* Se declara el syntax del mediaquery usando la sigueint forma: 
