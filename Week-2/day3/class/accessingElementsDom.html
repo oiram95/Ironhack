@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Class</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Como seleccionamos elementos del DOM</h1>
+      <div class="container">
+        <h2>Apuntando a ID's</h2>
+        <p>
+          En este ejemplo usamos el id de "Master" para seleccionar el elemento.
+        </p>
+        <p id="master">i love javascript</p>
+        <p>
+          el id es case-sensitive, ejemplo ids de #Master es completamente
+          diferente a #master
+        </p>
+        <p>
+          Una vez hemos seleccionado el elemento, podemos modificarlo o moverlo
+          entre los nodos padres e hijos
+        </p>
+      </div>
+
+      <div class="container">
+        <h2>Apuntando Clases</h2>
+        <div>
+          <p class="master2">i love javascript</p>
+          <p class="master2">i love react</p>
+          <h1 class="master2">i want a job</h1>
+          <button id="btn">click me</button>
+          <h1 class="hipHop">I love Hip Hop</h1>
+          <h1 class="zepellin">
+            <span class="innerZeppellin">I love Led Zeppellin</span>
+          </h1>
+        </div>
+        <p>
+          ACA USAMOS UN evento que todavia no hemos explicado que se llama el
+          (addEventListener). Esto lo explcaremos mas tarde :)
+        </p>
+      </div>
+
+      <div class="container">
+        <h2>Apuntando a tags de html</h2>
+        <div>
+          <p>VsCode</p>
+          <p>Atom</p>
+          <p>Sublime text</p>
+          <button id="btn2">click me</button>
+          <p class="wuTang">Wu Tang Clan</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Apuntando a selectores</h2>
+        <h3>
+          Este approach varia un poco porque te hace un match con el selector
+          que le pases. Este metodo puede aceptar todo tipo de selectores (tags,
+          ids, clases). Podemos usarlo de una manera singular o plurar.
+        </h3>
+        <h3>Veamos algunos ejemplos</h3>
+
+        <div id="frontend">i am a frontend developer</div>
+
+        <!-- // Ejemplo con dos divs con la misma compoosicion.... you get me..  -->
+        <div class="conatainer">
+          <div class="pauman">
+            <p>Paulo le gusta MarceloD2</p>
+          </div>
+          <div class="pauman">
+            <p>Pauman le encanta el JS</p>
+          </div>
+        </div>
+
+        <div id="frontend2">
+          <span>
+            <h1 class="basket">
+              <p>i am a frontend developer who also loves the Wu Tang Clan</p>
+            </h1>
+            <h1 class="basket">I love basketball</h1>
+            <h1 id="ufc">Madu & Genis will be on the UFC one day</h1>
+          </span>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Apunto a selectores usando el metodo - querySelectorAll()</h2>
+        <p>
+          Este approach es parecido al de arriba y te regresa todos los
+          elementos del nodo que selecciones.
+        </p>
+        <div>
+          <p class="technologies">React</p>
+          <p class="technologies">Vue</p>
+          <p class="technologies">Angular</p>
+        </div>
+      </div>
+    </section>
+    <!-- <script src="index.js"></script> -->
+    <script>
+      // Get Element by ID
+      const masterEl = document.getElementById("master");
+      console.log(masterEl);
+
+      //Get Elements by className - singular
+      const hipHop = document.getElementsByClassName("hipHop");
+      console.log(hipHop);
+
+      //Get Elements by className - Plural
+      const godsOfRock = document.getElementsByClassName(
+        "zepellin innerZeppellin"
+      );
+      console.log(godsOfRock);
+
+      // Get Element by tagName
+      const wuTang = document.getElementsByTagName("p");
+      const wuTangSelected = wuTang[10];
+      console.log(wuTangSelected);
+
+      // Get element by querySelector - singular - ID
+      const querySelectorIndividual = document.querySelector("#frontend");
+      console.log(querySelectorIndividual);
+
+      // Get element by querySelector - singular - Class
+      const querySelectorIndividual2 = document.querySelector(".wuTang");
+      console.log(querySelectorIndividual2);
+
+      // Get element by querySelector - singular - Tag - Siempre te regresa la primera instancia que se encuentre en el DOM.
+      const querySelectorIndividual3 = document.querySelector("p");
+      console.log(querySelectorIndividual3);
+
+      // Ejemplo con selectores multiples {bastante anidado}
+      const querySelectorMultiple = document.querySelector(
+        "#frontend2 span .basket"
+      );
+      console.log(querySelectorMultiple);
+
+      // Ejemplo de dos bloque de codigo que tienen su mismo syntax - se personifica la primera instancia que reconoce el dom.
+      const pauman = document.querySelector(".pauman p");
+      console.log(pauman);
+
+      // Get elementos usando el metodo - .querySelectorAll()
+      const technologies = document.querySelectorAll(".technologies");
+      console.log(technologies[2]);
+    </script>
+  </body>
+</html>

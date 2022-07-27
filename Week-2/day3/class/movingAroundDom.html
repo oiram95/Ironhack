@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Around Dom</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="container">
+        <h1>Moviendonos por los documentos</h1>
+        <p>
+            Ok en esta parte ya deberiamos deducir que todo dentro de un archivo
+            HTML se distribuye en nodos. Todo, desde los tags sus clases sus ids y
+            si vamos un paso mas alla podemos pensar que el texto dentro de un "
+            p"  tag viene siendo tambien un elemento dentro del nodo "P".</p>
+          </p>
+    
+          <p>En el dom podemos navegar entre los nodos y acceder a ellos usando relaciones entre los nodos como hemos hablado anterior (padres, hermanos, hijos).</p>
+    
+          <h2>Review Antes de empezar</h2>
+          <ul>
+            <li>Todos los nodos tienen solo 1 padre. Excepto el nodo superior que no tiene padre</li>
+            <li>Un nodo puede tener mas de un hijo</li>
+            <li>Hermanos son nodos que tienen solo 1 padre</li>
+          </ul>
+    
+          <h2>Que veremos aca? </h2>
+          <ul>
+            <li>ParentNode</li>
+            <li>childrenNodes</li>
+            <li>lastElementChild</li>
+            <li>firstElementChild</li>
+            <li>nextElementSibling</li>
+            <li>previousElementSibling</li>
+          </ul>
+    </section>
+
+    
+        <h1>Nos basamos en este ejemplo</h1>
+        <div id="parent">
+            <div id="firstchild">i am a first child</div>
+            <p id="secondchild">i am the second child</p>
+            <h4>i am alive</h4>
+            <h1>hello world</h1>
+            <p id="lastchild">i am the last child</p>
+        </div> 
+
+    
+    
+
+    <script>
+        // Transversing through our document
+
+
+        // FirstElementChild
+        const parent3 = document.querySelector("#parent").firstElementChild;
+        console.log(parent3)
+
+        // FirstElementChild
+        const parent4 = document.querySelector("#parent");
+        console.log(parent4.firstElementChild)
+
+        // Example of selecting the last element of the dom tree with the method lastElementChild
+        const parent = document.getElementById('parent').lastElementChild
+        // console.log(parent)
+
+
+        // children method returns all childrenNodes that are within the parentNode inside the DOM! 
+        const parent2 = document.getElementById('parent').children
+        // console.log(parent2)
+
+
+        // parentNode method returns 
+        const parentNodeExample = document.getElementById('secondchild');
+        console.log(parentNodeExample.parentNode)
+
+        //nextElementSibling method returns  - 
+        const nextElementExample = document.getElementById('secondchild');
+        console.log(nextElementExample.nextElementSibling)
+
+        //previousElementSibling method returns 
+        const previouesElementExample = document.querySelector("#lastchild");
+        console.log(previouesElementExample.previousElementSibling)
+
+    </script>
+  </body>
+</html>
