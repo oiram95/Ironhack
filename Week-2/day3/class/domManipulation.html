@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Manipulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Como Manipular Elementos en el dom?</h1>
+      <p>En esta seccion veremos</p>
+      <ul>
+        <li>Crear Elementos</li>
+        <li>Inyectar contenido/texto dentro de un elemento</li>
+        <li>Append/pegar elementos</li>
+        <li>insertar un elemento antes de otro elemento</li>
+        <li>Intercambiar un elemento de nodo "hijo"</li>
+        <li>Eliminar un elemtno de nodo "hijo</li>
+      </ul>
+    </section>
+    <section class="container">
+      <div>Crear Elementos</div>
+      <div id="parent">
+        <div id="firstchild">i am a first child</div>
+        <p id="secondchild">i am the second child</p>
+        <h4>i am alive</h4>
+        <h1>hello world</h1>
+        <p id="last">i am the last child</p>
+      </div>
+    </section>
+
+    <script>
+      // Manipulando EVENTOS del DOM
+
+      // Crear Elementos usando el metodo createElement()
+      const createEl = document.createElement("div");
+      // console.log(createEl);
+
+      //   .
+      //   .
+      //   .
+      //   .
+      // Generar/Añadir contenido dentro del elemento que hemos creado dinamicamente  usando el metodo innerHtml()
+      const mySuperCoolInformation = (createEl.innerHTML =
+        "Wu Tang Clan is one the most proficient hip hop groups in the universe");
+      // verifica que hemos añadido el texto al div
+      console.log(mySuperCoolInformation);
+      //   verifica que el texto se añadio al div mediante una impresion de consola.
+      console.log(createEl);
+
+      //   .
+      //   .
+      //   .
+      //   .
+      // Insertar/Append elementos dentro de mi frontEnd mediante el metodo appendChild
+      const parentEl = document.getElementById("parent");
+      parentEl.appendChild(createEl);
+
+      const element2 = document.createElement("div");
+      const myInfo = (element2.innerHTML = `
+        <div>
+        <h1>JS is super cool</h1>
+        <p>I really love coding listening to music</p>    
+        </div>
+      `);
+      const brotherEl = document.getElementById("parent");
+      brotherEl.append(element2);
+
+      // Insertar un elemento antes de otro elemento usando el metodo insertBefore() - Como regla siempre acepta 2 argumentos dentro del parentesis.
+      const parentEl2 = document.getElementById("parent");
+      const firstchildEl2 = document.getElementById("firstchild");
+      const createEl2 = document.createElement("div");
+      const last = document.querySelector("#last");
+      const innerhtml2 = (createEl2.innerHTML =
+        "i really love playing the guitar");
+
+      //   parentEl2.insertBefore(createEl2, firstchildEl2);
+      //   console.log(parentEl2);
+
+      // Remplazar los hijos de un nodo tipo padre usando el metodo replaceChild() - cComo regla siempre acepta 2 argumentos dentro del parentesis.
+      parentEl2.replaceChild(createEl2, last);
+
+      //Eliminar los hijos de un nodo usando el metodo removeChild() - Como regla siempre acepta un solo parametro
+      const firstChildElement = document.querySelector("#firstchild");
+      const parentElement = document.getElementById("parent");
+      parentElement.removeChild(firstChildElement);
+
+      // Eliminar algo del nodo sea padre o hijo, como regla acepta un solo argumento
+      //   parentElement.remove(parentElement);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Que son eventos del browser?</h1>
+      <p>Une vento se refiere a una accion dentro del programa.</p>
+      <p>Vamos a enfocarnos en eventos en contexto al browswer.</p>
+      <p>
+        En esencia un evento es un indicador que te muestra ciertas acciones han
+        ocurrido para que el usuario responda o accione en base al evento :)
+      </p>
+    </section>
+    <section>
+      <h2>Mouse Events</h2>
+      <ul>
+        <li>click</li>
+        <li>dblclick</li>
+        <li>mousemove</li>
+        <li>mouseover</li>
+        <li>mousewheel</li>
+        <li>mouseout</li>
+        <li>mousedown</li>
+        <li>mouseup</li>
+      </ul>
+      <h2>Touch Events</h2>
+      <ul>
+        <li>touchstart</li>
+        <li>touchmove</li>
+        <li>touchend</li>
+        <li>touchcancel</li>
+      </ul>
+      <h2>Keyboard Events</h2>
+      <ul>
+        <li>keydown</li>
+        <li>keypress</li>
+        <li>keyup</li>
+      </ul>
+      <h2>Form Events</h2>
+      <ul>
+        <li>focus</li>
+        <li>blur</li>
+        <li>change</li>
+        <li>submit</li>
+      </ul>
+      <h2>Window Events</h2>
+      <ul>
+        <li>scroll</li>
+        <li>resize</li>
+        <li>hashchange</li>
+        <li>load</li>
+        <li>unload</li>
+      </ul>
+    </section>
+    <section>
+      <h1>Event Handlers</h1>
+      <p>
+        Como hemos dicho anteriormente, monitoreamos eventos para que cuando
+        recibamos alguna notificacion de que un evento ha ocurrido, el programa
+        puede responder acordemente.
+      </p>
+      <p>
+        Esta accion en teoria funciona a base funciones que coloquialmente
+        llamamos como eventHandlers que tambien se refieren a eventListeners. Si
+        un evento ocurre y se invoca el eventHandler, podemos decir que el
+        evento queda registrado.
+      </p>
+
+      <div>
+        <p>Agregemos un boton y agremosle un click handler</p>
+        <button id="btn">Click Meeee</button>
+        <p>
+          Ejemplo: si tenemos un boton con un id de "btn", el eventHandler se
+          invoca con una alerta en el browser que le pasamos el textp "Button
+          has been clicked". Le estamos asignando una propiedad "onClick" a la
+          funcion que vendria siendo el eventHandler.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h1>Asignar Event Handlers</h1>
+      <p>
+        tenemos varias maneras de asingar eventHandlers a nuestros elementos de
+        html
+      </p>
+
+      <p>
+        En teoria la manera mas facil de agregarlos es inline como hemos visto
+        en el ejemplo anterior pero es el menos recomendado
+      </p>
+
+      <button onclick="alert('Hello world!')">Click Me 001</button>
+      <button onClick="(() => alert('Hello World!'))()">Click Me Too</button>
+      <button ONCLICK="(() => alert('Hello World!'))()">Click Me Too</button>
+      <p>
+        Tomen nota que no es comun encontrar atributos de eventos en HTML como
+        onClick, onChange o onSubmit porque los atributos de html no son case
+        sentitive. Basicamente es syntatisticamente correcto user "onclicl",
+        "onClick" o ONCLICK
+      </p>
+
+      <div>
+        <p>Usando una funcion en un script tag</p>
+        <button onclick="onClickHandler()">Click me</button>
+      </div>
+    </section>
+
+    <!-- <script>
+      const button = document.querySelector("#btn");
+      button.onclick = function () {
+        alert("Wu Tang Clan is the coolest in the world!");
+      };
+      console.log(button);
+
+      // Rgulr function that is exported to html - without using any querySelector or basically any type of dom selector on JS
+      //   function onClickHandler() {
+      //     alert("Nas is the king of Brooklyn, Hip Hop");
+      //   }
+
+      const onClickHandler = () => {
+        alert("Nas is the king of Brooklyn, Hip Hop");
+      };
+    </script> -->
+    <script src="index2.js"></script>
+  </body>
+</html>
