@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions- CallBacks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-r from-gray-100 to-blue-100">
+    <!-- <div class="conatiner p-4">
+      <h1>Advanced Functions- CallBacks</h1>
+      <h1 class="font-bold">Que veremos?</h1>
+      <ul class="list-disc p-4">
+        <li>Usar expresiones</li>
+        <li>pasar funciones a otras funciones como argumentos</li>
+        <li>
+          comprender el comportamiento asíncrono de JavaScript y la necesidad de
+          las devoluciones de llamada
+        </li>
+        <li>utilizar funciones anónimas</li>
+        <li>utilizar funciones de flecha</li>
+        <li>utilizar el objeto arguments</li>
+      </ul>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">Introduction</h1>
+      <p>
+        Como ya se mencionó en la lección de introducción a las funciones,
+        podemos declarar funciones de 3 maneras diferentes: como una declaración
+        de función (aka statements), como expresiones de función y como una
+        instancia del constructor de objetos de función global.
+      </p>
+      <p>
+        Miremos la funcion llamada <strong class="font-bold">calcSum</strong>
+      </p>
+      <ul class="list-disc px-4">
+        <li class="py-2">
+          function es una palabra clave reservada y sirve para indicar que un
+          determinado bloque de código a ejecutar estará envuelto bajo un
+          determinado nombre
+        </li>
+        <li class="py-2">
+          (x, y) son los parámetros que se pasarán en la función y que se
+          utilizarán entre {...} que representa el cuerpo de la función; son
+          marcadores de posición que se sustituirán por valores reales en el
+          momento en que se ejecute esta función la sentencia return muestra
+          cuál será el valor devuelto por la función. Además, dijimos que el
+          retorno es la última pieza de código que se ejecuta dentro de la
+          función y que si añadimos algún código después del retorno por
+          accidente - no se ejecutará
+        </li>
+        <li class="py-2">
+          calcSum(12, 23) es la llamada a la función, cuando la función se
+          ejecuta con algunos valores reales pasados en lugar de x e y. 12 y 23
+          son argumentos de la función
+        </li>
+      </ul>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">Function expressions</h1>
+      <p>
+        Ahora que sabemos cómo declarar e invocar funciones con nombre
+        <span class="font-bold">(function statements)</span>, va a ser muy fácil
+        explicar cómo hacer lo mismo con expresiones de función. Antes de
+        mostrarte cómo trabajar con expresiones de función, debemos mencionar
+        brevemente que las funciones son tratadas como los llamados objetos de
+        primera clase en JavaScript. Esto puede parecer confuso: ¿las funciones
+        son objetos? Sin embargo, al final de este curso, sabrá cómo y por qué
+        "todo en JavaScript es un objeto", incluidas las funciones. Si estás
+        interesado en aprender más sobre este tema, consulta la sección de
+        Recursos Extra más adelante. Debido a que las funciones son tratadas
+        como objetos, significa que pueden ser asignadas a variables (es decir,
+        pueden ser almacenadas en variables). Esto nos lleva a las expresiones
+        de funciones. Veamos este ejemplo de declaración de función:
+      </p>
+    </div> -->
+
+    <!-- <div class="container p-4">
+      <h1 class="font-bold">Function declaration vs. function expressions</h1>
+      <div class="container bg-white rounded-md mx-auto px-4 w-full mt-4">
+        <p>
+          Una function declaration es una función con nombre y puede almacenarse
+          en una variable si es necesario (por ejemplo, con el saludo). Una
+          expresión de función es una función sin nombre (o llamada anónima) que
+          se almacena en una variable. Ambas pueden reutilizarse en todo el
+          código.
+        </p>
+        <br />
+        <p>
+          Function expressions & function declarations hacen prácticamente lo
+          mismo.
+          <br />
+          En ambos ejemplos, para llamarlas se hace lo mismo (welcomeMessage()),
+          y luego ejecutan cualquier código que esté dentro de su bloque de
+          código (también conocido como cuerpo de la función) {..} . Entonces,
+          ¿por qué tenemos que conocer ambos? Bueno, hay una diferencia y no
+          está relacionada con lo que hacen, sino con cómo se ejecutan. La
+          diferencia entre estos dos es el orden en que se ejecuta el código.
+          Mira esto:
+        </p>
+      </div>
+      <p>VER CODIGO</p>
+      <p>
+        Para entender por qué y cómo ocurrió esto, introduciremos el concepto de
+        Hoisting
+      </p>
+      <div class="container bg-white rounded-md mx-auto px-4 w-full mt-4">
+        <p>
+          EL Hoisting es un concepto relacionado con la forma en que el lenguaje
+          de programación es interpretado por una máquina que lo ejecuta. Este
+          concepto está relacionado con cualquier tipo de variables y tipos de
+          datos, y no está correlacionado con las funciones solamente.
+        </p>
+      </div>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">Hoisting</h1>
+      <p>
+        Cuando el código JavaScript se ejecuta, lo hace de arriba a abajo y
+        luego de izquierda a derecha. Esto significa que lo que hayamos escrito
+        en la línea 1 de nuestro fragmento de código se ejecutará antes de lo
+        que venga en la línea 2, y lo que esté en la línea 2 se ejecutará antes
+        de la línea 3 y así sucesivamente. Esto implica que, para utilizar una
+        variable, es necesario declararla primero. Sin embargo, este no es el
+        caso cuando se trata de declaraciones de funciones. Las declaraciones de
+        funciones se elevan a la parte superior del código antes de que se
+        ejecute cualquier otro código.
+        <br />
+        Pero, ¿cómo se produce este proceso de elevación de las declaraciones de
+        función? Antes de que se ejecute cualquier código, tu código JavaScript
+        necesita ser interpretado (traducido a un código comprensible para el
+        navegador). Es en este proceso de interpretación donde las declaraciones
+        de funciones se elevan a la parte superior del código, y es por eso que
+        podemos llamar a una función antes incluso de declararla. Así que cuando
+        llega la fase de ejecución, las declaraciones de funciones ya están
+        interpretadas y cargadas. Esto significa que no necesitamos definirlas
+        para poder utilizarlas.
+        <br />
+        El mismo proceso no ocurre con las expresiones de funciones. Se
+        interpretan en la línea exacta en la que se escriben, por lo que sólo
+        podemos utilizarlas después de haberlas definido.
+      </p>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">CallBacks</h1>
+      <p>
+        Como ya hemos mencionado, las funciones son objetos de primera clase y,
+        como tales, pueden almacenarse en variables. Como este es el caso, las
+        funciones pueden ser pasadas como parámetros (argumentos) a otras
+        funciones. Nos referimos a esto como una devolución de llamada.
+        <br />
+        Las devoluciones de llamada son una herramienta que permite a las
+        funciones llamar a otras funciones y puede ayudarnos con el control de
+        la secuencia, es decir, el orden en el que queremos que se ejecuten
+        nuestras funciones. Esto puede ser particularmente útil en
+        circunstancias en las que queremos que una función se ejecute antes que
+        otra.
+        <br />
+        Hablaremos de los callbacks con más detalle en la próxima lección, pero
+        por ahora recuerda que son un ejemplo de función avanzada.
+      </p>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">Anonymous Functions</h1>
+      <div class="container bg-white rounded-md mx-auto px-4 w-full mt-4">
+        <ul class="list-disc px-4">
+          <li>Un anonymous function es una funcion sin nombre</li>
+          <li>
+            Una función anónima no suele estar disponible para su uso después de
+            su creación inicial. La razón para crear una función sin nombre es
+            que sólo se utilizará en ese momento exacto y nunca más, por lo que
+            realmente no hay necesidad de nombrarlas
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">
+        Anonymous functions as other function’s arguments
+      </h1>
+      <p>
+        Las funciones anónimas se pueden utilizar como un argumento que se pasa
+        a otra función.
+        <br />
+        He aquí algunos ejemplos:
+      </p>
+      <p>Revisar Codigo</p>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">Arrow Functions</h1>
+      <p>
+        Según la documentación oficial, una expresión de función de flecha es
+        una alternativa sintáctica a una expresión de función regular.
+        <br />
+        Esta actualización se introdujo con ES6 y su objetivo principal era
+        introducir una sintaxis más sencilla y ayudar con algunos retos
+        anteriores relacionados con el ámbito con funciones/métodos anidados.
+        <br />
+        Echemos un vistazo a una función de flecha:
+      </p>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">
+        The <span class="text-2xl">this</span> keyword and the matter of a scope
+      </h1>
+      <p>
+        Explicaremos este concepto con más detalle en una de las próximas
+        lecciones, pero por ahora, vamos a cubrir lo básico.
+        <br />
+        Veamos el siguiente ejemplo - un objeto simple con 3 propiedades, donde
+        una de ellas es un método:
+      </p>
+    </div>
+    <div class="container p-4">
+      <h1 class="font-bold">The arguments object</h1>
+      <p>
+        Dentro del cuerpo de una función, puedes acceder a un objeto llamado
+        argumentos. Este objeto representa todos los argumentos pasados a una
+        función. Lo específico relacionado con él es que se trata de un objeto
+        tipo array. Según el MDN, "array-like" significa que los argumentos
+        tienen una propiedad de longitud y propiedades indexadas desde cero,
+        pero no tiene los métodos incorporados de los arrays como forEach() (y
+        otros que cubriremos pronto).
+      </p>
+    </div>
+
+    <div class="container p-4">
+      <h1 class="font-bold">En Resumen</h1>
+      <p>
+        En esta lección, has aprendido otra forma de definir funciones en
+        JavaScript: utilizando funciones como expresiones. Esencialmente no hay
+        mayor diferencia entre la declaración de funciones y la expresión,
+        excepto cuando se trata de interpretarlas en nuestros ordenadores.
+      </p>
+      <br />
+      <p>
+        Hemos aprendido que las declaraciones de funciones se levantan y pueden
+        ser llamadas antes de ser definidas en el código, lo que tiene
+        implicaciones positivas y negativas. Las expresiones de funciones
+        imponen un código mejor estructurado.
+      </p>
+      <br />
+      <p>
+        Aprendimos que las funciones pueden pasarse como argumentos a otras
+        funciones, y luego vimos cómo se ve eso en el caso de los cierres.
+      </p>
+      <br />
+      <p>
+        Aprendimos que algunas funciones sólo pueden usarse una vez, por lo que
+        no es necesario nombrarlas (también conocidas como funciones anónimas).
+      </p>
+      <p>
+        El ES6 trajo una forma mucho más agradable y corta de escribir funciones
+        usando la sintaxis de expresión de función de flecha.
+      </p>
+      <p>
+        Y finalmente, vimos que las funciones por defecto tienen acceso a los
+        argumentos en sus cuerpos, y vimos un par de casos de uso.
+      </p>
+    </div> -->
+
+    <div class="container p-4">
+      <h1 class="font-bold">Callback function</h1>
+      <button id="callbackbutton" class="p-4 bg-gray-900 text-white">
+        Click Me
+      </button>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <!-- <script>
+    //Hemo aprendido la manera convencional de usar funciones
+    function calcSum(x, y) {
+      return x + y;
+    }
+
+    checkFuncDeclaration();
+    // console.log(calcSum(2, 4));
+
+    // function declaration (statement)
+
+    const welcomeMessage = (message) => {
+      return message;
+    };
+
+    const greeting = welcomeMessage("So nice to have you here! Welcome!");
+    console.log(greeting);
+
+    // function declaration (statement) - SIMPLIFIED
+    const welcomeMessageSimplified = function (message) {
+      console.log(message);
+    };
+    welcomeMessageSimplified(
+      "C.RE.A.M - Cash Rules Everything Around Me -  👐"
+    );
+
+    // function declaration (statement)
+
+    // checkFuncDeclaration(); // => Func declaration CAN be invoked before it's defined.
+
+    function checkFuncDeclaration() {
+      console.log("Func declaration CAN be invoked before it is defined.");
+    }
+
+    // function expression
+
+    // checkFuncExpression(); // => ReferenceError: checkFuncExpression is not defined
+
+    // const checkFuncExpression = function () {
+    //   console.log("Func expression CAN NOT be invoked before it is defined.");
+    // };
+    // ESTA FUNCION DA ERROR
+
+    // anonymous function as other function arguments - example 1
+    function printName(name, anonFunc) {
+      anonFunc(name);
+    }
+
+    // printName("sandra", function (name) {
+    //   console.log(name[0].toUpperCase() + name.slice(1));
+    // });
+
+    // anonymous function as other function arguments - example 2
+    function getLength(str, anonFunc) {
+      anonFunc(str);
+    }
+
+    // getLength("pauman", function (str) {
+    //   console.log(`${str} has ${str.length} letters.`);
+    // });
+    // console.log(getLength);
+
+    // getLength("noemi", function (str) {
+    //   console.log(`${str} has ${str.length} letters.`);
+    // });
+
+    // anonymous function as other function arguments - example 3 - SETTIMEOUT
+    // SETTIMEOUT: El método setTimeout() de JavaScript es un método incorporado que permite temporizar la ejecución de una determinada función . Es necesario pasar la cantidad de tiempo a esperar en milisegundos , lo que significa que para esperar un segundo, es necesario pasar mil milisegundos .
+
+    // setTimeout(function () {
+    //   console.log(
+    //     "Quincy Jones, Sir George Martin & Phil Spector are by far the sickest producers of the 20th Century"
+    //   );
+    // }, 3000);
+    // Nada pasa por tres segundos!
+
+    // Dado que las funciones anónimas no están disponibles para su uso posterior, si, por alguna razón, tenemos la necesidad de utilizarlas, debemos darles una declaración de función adecuada o una estructura de expresión de función. Así podremos referenciarlas y utilizarlas siempre que lo necesitemos.
+    function notifyUser() {
+      console.log(
+        "Neil Frances, 40Nights&40Days, LargeProffesor, Dj Premier, Kevin Parker, Mark Ronson and believe or not, freaking Dave Ghrol are the producers with more grammy nominations within the last 20 years in the 'Producers Category' of music "
+      );
+    }
+
+    // setTimeout(notifyUser, 6000);
+
+    //Arrow Functions
+    // arrow function syntax
+
+    // function expression syntax
+    // const greetingWithoutArrow = function (name) {
+    //   console.log(`Hello, ${name}!`);
+    // };
+    // console.log(greetingWithoutArrow("Diego"));
+
+    // const greetingWithArrow = (name) => {
+    //   return name;
+    // };
+    // console.log(`Hello ${greetingWithArrow("Aleix")}`);
+
+    //Pero esta función se puede acortar aún más, ya que sólo devolvemos una expresión (sólo hay una línea de código en el cuerpo), por lo que podemos omitir los corchetes y omitir el retorno, ya que está implícito:
+    const greetingWithArrowShorter = (name) => `Hello, ${name}!`;
+    // console.log(greetingWithArrowShorter("Jarko"));
+
+    //En caso de que no se pasen parámetros - entonces los paréntesis vacíos son obligatorios:
+    const greetingWithoutParameters = () =>
+      console.log("Hello there you Javascript Lovers!");
+    // console.log(greetingWithoutParameters());
+
+    //USING THE KEYWORD THIS
+    const user = {
+      name: "Diego",
+      age: 31,
+      getOlder: function () {
+        console.log(this);
+        console.log(this.name);
+      },
+    };
+    // console.log(user.getOlder());
+    //Como podemos ver, la palabra clave this se refiere al propio objeto (usuario). Así que si quisiéramos añadir un año a la edad de Diego, podríamos actualizar nuestro código de la siguiente manera:
+    const user2 = {
+      name: "Diego",
+      age: 31,
+      getOlder: function () {
+        this.age += 1;
+        console.log(this.age);
+      },
+    };
+    // console.log(user2.getOlder());
+
+    //Genial. Ahora, vamos a añadir el método nativo de JS setInterval() para hacer que Diego sea "más viejo" en un año cada segundo:
+    const user3 = {
+      name: "Diego",
+      age: 31,
+      getOlder: function () {
+        setInterval(function () {
+          this.age += 1;
+          console.log(this.age);
+        }, 1000);
+      },
+    };
+    // console.log(user3.getOlder());
+
+    //Hmm... ¿qué ha cambiado? Volvamos a sacar la palabra clave this:
+    const user4 = {
+      name: "Diego",
+      age: 31,
+      getOlder: function () {
+        setInterval(function () {
+          console.log(this);
+        }, 1000);
+      },
+    };
+    // console.log(user4.getOlder());
+    // Parece que hemos "perdido" el acceso a las propiedades del objeto "usuario", ya que esta palabra clave se refiere ahora al método setInterval(). Simplificando, esto dentro de setInterval() se refiere al setInterval().
+
+    //Entonces, ¿qué podemos hacer para acceder a las propiedades que necesitamos?
+
+    //La forma más sencilla es utilizar la sintaxis de la función flecha, ya que vincula el ámbito al propio objeto. (Más adelante explicaremos el término "bind" con más detalle. En otras palabras, gracias a =>, ahora tenemos de nuevo acceso a las propiedades del "usuario").
+    const user5 = {
+      name: "Diego",
+      age: 31,
+      getOlder: function () {
+        setInterval(() => {
+          this.age += 1;
+          console.log(this.age);
+        }, 1000);
+      },
+    };
+    // console.log(user5.getOlder());
+
+    //USANDO ARGUMENTS
+    function printSomething() {
+      console.log(arguments);
+    }
+
+    // console.log(
+    //   printSomething(
+    //     "What else can a guitarrist do but, just learn from Hendrix, Howlin Wolf & John Frusciante"
+    //   )
+    // );
+
+    //Podemos utilizar corchetes [] para acceder a los argumentos: arguments[0] devuelve el primer argumento, arguments[1] devuelve el segundo, y así sucesivamente. También podemos utilizar la propiedad length del objeto arguments para determinar el número de argumentos.
+
+    // function printSomething2() {
+    //   console.log("arguments length: ", arguments.length);
+    //   console.log("all: ", arguments);
+    //   console.log("first arg: ", arguments[0]);
+    //   console.log("second arg: ", arguments[1]);
+    // }
+    // console.log(printSomething2("Hello", "I love playing records"));
+
+    //Como usamos estos argumentos?
+    // function printArgs() {
+    //   for (let i = 0; i < arguments.length; i++) {
+    //     console.log(arguments[i]);
+    //   }
+    // }
+    // console.log(printArgs("hey", "there", "ironhacker"));
+    console.log(printArgs(1, 77, { name: "Diego" }, ["Guitar", "Piano"]));
+
+    //Tengan en cuenta que los argumentos son un objeto, por lo que .forEach() y otros métodos específicos de los arrays no se pueden utilizar en él. Si intentas utilizar métodos de array sobre él, obtendrás un error similar a este:
+    //TypeError: arguments.forEach is not a function
+
+    //Sin embargo, debes tratarlo como un array cuando lo utilices en tu código. Aunque tiene algunas limitaciones, este "objeto tipo array" puede convertirse fácilmente en un array, si es necesario:
+    // const args = Array.from(arguments);
+
+    // EJEMPLO
+    function useArgsAsArr() {
+      const argsArr = Array.from(arguments);
+
+      argsArr.forEach((el) => console.log(el));
+    }
+    // console.log(useArgsAsArr("I", "am", "iterated", "with", "forEach"));
+  </script> -->
+</html>
