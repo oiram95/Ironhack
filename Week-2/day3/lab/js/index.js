@@ -73,7 +73,7 @@ function createProduct() {
   `;
 
   //Clear the input fields
-  productName.value = 'Enter Product Name';
+  productName.value = 'Product Name';
   productPrice = 0;
 }
 
@@ -87,5 +87,5 @@ window.addEventListener('load', () => {
 
   // Code Here
   const addButton = document.getElementById('create');
-  addButton.addEventListener('click', createProduct);
+  addButton.addEventListener('click', createProductAnton);
 });
