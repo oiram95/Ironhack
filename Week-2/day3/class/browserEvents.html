@@ -135,21 +135,21 @@
           <h1 class="font-bold">Usando una funcion en un script tag</h1>
           <button class="font-heading px-5 py-3 w-auto uppercase text-white text-xs font-semibold  bg-gray-900 rounded-md"
           onclick="onClickHandler2()">
-          Click me
+          Click me - 
         </button>
       </div>
       <div>
         <h1 class="font-bold">Usando un un evento directo</h1>
         <button class="font-heading px-5 py-3 w-auto uppercase text-white text-xs font-semibold  bg-gray-900 rounded-md"
         id="button2">
-        Click me
+        Click me - event hanlding
       </button>
       </div>
       <div>
         <h1 class="font-bold">Usando un eventListener</h1>
         <button class="font-heading px-5 py-3 w-auto uppercase text-white text-xs font-semibold  bg-gray-900 rounded-md"
         id="button3">
-        Click me
+        Click me - Arrow Function with event handling
       </button>
       </div>
       <div>
@@ -158,29 +158,31 @@
         <p>La <strong>(e)</strong> en esa función es un objeto que hace referencia al evento en sí. Dentro de ese objeto tienes acceso a muchas propiedades y funciones útiles, como el botón o la tecla del ratón que se ha pulsado, o información sobre el objetivo del evento: el nodo del DOM sobre el que se ha hecho clic.</p>
         <button class="font-heading px-5 py-3 w-auto uppercase text-white text-xs font-semibold  bg-gray-900 rounded-md"
         id="button4">
-        Click me
+        Click me - Param in Events
       </button>
       </div>
       <h1 class="font-bold">Añadiendo evenetListeners en cosas multiples </h1>
       <p>Esto puede parecer un montón de código si estás adjuntando muchos eventListeners a muchos elementos. Hay algunas maneras de hacerlo de manera más eficiente. Hemos aprendido que podemos obtener una lista de nodos de todos los elementos que coinciden con un selector específico con querySelectorAll('selector'). Para añadir un listener a cada uno de ellos simplemente tenemos que iterar a través de toda la lista así:</p>
     
-       <div class="px-20 py-2 mx-auto multiple" id="1"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click Me</div></div>
-       <div class="px-20 py-2 mx-auto multiple" id="2"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click Me</div></div>
-       <div class="px-20 py-2 mx-auto multiple" id="3"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click Me</div></div>     
+       <div class="px-20 py-2 mx-auto multiple" id="16"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase cursor-pointer">Click Me</div></div>
+       <div class="px-20 py-2 mx-auto multiple" id="2"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase cursor-pointer">Click Me</div></div>
+       <div class="px-20 py-2 mx-auto multiple" id="4"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase cursor-pointer">Click Me</div></div>     
+       
+
+       <h1 class="font-bold text-xl">Short Version</h1>
        
        <div class="px-20 py-2 mx-auto" id="shortened"><div class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click Me</div></div>
 
        <div class="px-20 py-2 mx-auto">
         <h1 class="font-bold">Double Click</h1>
         <p class="font-bold mychange">I love Hip Hop</p>
-        <div id="doubleclick" class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click Me</div>
+        <div id="doubleclick" class="mx-auto p-4 bg-gray-900 rounded-md text-white uppercase">Click M - doubleclick</div>
       </div>
 
       <div class="px-20 py-2 mx-auto">
         <h1 class="font-bold">onKeyDown</h1>
         <p class="font-bold mychange">Una función se activa cuando el usuario pulsa una tecla en el inputField</p>
-        <!-- <input type="text" class="keydown" onkeydown="myFunction()"> -->
-        <input type="text" class="keydown">
+        <input type="text" class="balma-estaba-en-la-playa">
       </div>
 
        
@@ -234,38 +236,48 @@
       button4.addEventListener('click', function (e){
         // console.log(e)
         //tratemos esto ahora
-        console.log(e.target)
+        // console.log(e.target)
         //Ahora miremos el target classList el CSS
-        console.log(e.target.classList)
+        // console.log(e.target.classList)
+        
         //Mediante Cambiando la Clase
-        // button4.classList.add("bg-red-500")
-        // button4.classList.remove("uppercase")
+        button4.classList.add("bg-red-500")
+        button4.classList.remove("uppercase")
       });
 
+
+      // BOILERPLATE - TO USE ARROW FUNTCTION INSIDE AN EVENTLISTENER - NOT CONNECTED TO ANYTHING
+      // LlamamosAunaVariable.addEventListener("EventyType(click, dblclick)", ()=> {})
+
+      // --------------------------------
       // Añadiendo evenetListeners en cosas multiples 
-      const divMultiple = document.querySelectorAll(".multiple ");
-      divMultiple.forEach((div) => {
-        div.addEventListener("click", () => {
-          alert(`The Id of this div is ${div.id}`)
-        });
-      });
+      const divMultiple = document.querySelectorAll(".multiple");
+      divMultiple.forEach((myMultipleDiv) => {
+        myMultipleDiv.addEventListener("click", () =>{
+          alert(`el Id de este div es ${myMultipleDiv.id}`)
+        })
+      })
       
+
+      // Short Version of the previous function 
       const shortenedVersion = document.querySelector("#shortened").addEventListener("click", () => {
-        alert("Double Click")
+        alert("Short Version - Click")
       })
 
 
+
+      // DblClick event 
       const myFunction = (() => {
         document.querySelector(".mychange").innerHTML = "I love Hip Hop & Rock & Roll"
       })
       const click = document.querySelector("#doubleclick").addEventListener("dblclick", myFunction)
 
 
-      // keydown FUnction
+      // keydown Function
 
-      const keyDownFunction =  document.querySelector(".keydown").addEventListener("keydown", () => {
+      const keyDownFunction =  document.querySelector(".balma-estaba-en-la-playa").addEventListener("keyup", () => {
           alert("You pressed a key inside the input field")
-        })
+      })
 
 
 
