@@ -1,0 +1,52 @@
+#wu {
+    color: blue;
+}
+
+h1:hover{
+    color: red;
+}
+
+
+/* Using specific index within the parent element to control the css */
+/* .myArtist .artist:nth-child(1) {
+    color: blue;
+}
+.myArtist .artist:nth-child(2) {
+    color: red;
+}
+.myArtist .artist:nth-child(3) {
+    color: purple;
+} */
+
+.myArtist{
+    width: 100%;
+    background-color: yellow;
+}
+
+.myArtist .artist:nth-child(odd) {
+    color: purple;
+}
+.myArtist .artist:nth-child(even) {
+    color: red;
+}
+
+.artist:root{
+    background-color: red;
+}
+
+.people-list .jarko:first-child{
+    color: red;
+}
+
+.people-list #anton:last-child{
+    color: blue;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
