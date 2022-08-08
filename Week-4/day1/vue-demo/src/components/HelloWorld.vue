@@ -1,5 +1,8 @@
 <template>
   <div class="hello">
+    <MySuperCoolComponent />
+    <Diego />
+
     <div id="binding-text">
       <div id="using-moustache-syntax">
         <!-- <h1>Hello Diego</h1> -->
@@ -187,56 +190,66 @@
       si eres menor de 21  - No puede tomar 
       si eres mayor que 60 - Estas muy viejo para tomar 
     </div> -->
+
+    <div v-bind:class="rosaliaMadreMia">
+      <h1
+        v-bind:style="{
+          color: 'white',
+          padding: '2rem',
+          fontSize: '45px',
+        }"
+      >
+        {{ welcomeMessageIntro }} {{ welcomeMessageName }}
+        {{ welcomeMessageLastName }}
+      </h1>
+      <div class="conditional">
+        <h1 v-if="drinkingAge >= 21 && drinkingAge < 60">
+          You can drink alcohol
+        </h1>
+        <h1 v-else-if="drinkingAge < 21">You are to young to drink alcohol</h1>
+        <h1 v-else>Old Man, take a chill pill</h1>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import MySuperCoolComponent from "./MySuperCoolComponent.vue";
+import Diego from "./Diego.vue";
 export default {
-  name: "HelloWorld", // nombre del componente, no tiene nda que ver con el metodo de data de abajo.
+  name: "HelloWorld",
   data() {
     return {
       // Usamos la regla, de el syntax de bigotes para poder acceder a nuestra data dentro del templateTag que es nuestro HTML.
       // Este principio se llama text interpolation / interpolacion de texto ?
-
       // binding text
       name: "Diego",
       greet: "Hello",
-
       // binding text using the v-text directive
       band: "Fleetwod Mac",
-
       // binding html using the v-html directive, please always use templateLiterals for inyecting html into the template templateLiterals = ``
       balma: `<b>Wu Tang Clan</b>`,
-
       // Usando API's externas siempre tener cuidado que la data que componga esta API sea correcta, porque si usamos un API externo y usamos esta directirz abrimos las posibilades que nos ataquen mediante un approach de hackeo que se llama crossSideScripting!
       bindingHtmlCrossSide: `<a href="#" onClick="alert('Yo yo yo you have been hacked by the wu tang clan')">Win a prize by clicking here!</a>`,
-
       // Bind Attributes - ID Attribute
       headingIdExample: "balmas-heading",
-
       //Binding with a Boolean Value
       isDisabled: true,
-
       // Bind Attributes - Class Attribute
       status: "danger",
-
       // Conditionally render attributes/properties with classes
       isPromoted: false,
-
       // Conditionally Render attributes with more than 1 condition
       isSoldOut: true,
-
       // Dynamically inyect style properties within an object
       textColor: "#3590F3",
       textSize: 40,
-
       // Dynamically inyect style properties within a single Object
       styleObject: {
         color: "blue",
         fontSize: "50px",
         padding: "20px",
       },
-
       //Dinamically inject arrays within a style attribute
       baseStyleOject: {
         fontSize: "50px",
@@ -254,15 +267,21 @@ export default {
         border: "1px solid darkred",
         padding: "30px",
       },
-
       // Conditional Rendering using v-if, v-else, v-else-if directives inside Vue. For this specific example we are going to use a number property.
       // num: "Wu Tang Clan", // Example using a string to showcase that this is not a number
       num: 2,
-
       // Conditionally render multiple elements inside the same condition
       display: true,
+
+      // Excercise Example
+      rosaliaMadreMia: "rosalia-background",
+      welcomeMessageIntro: "Hola mi nombre es",
+      welcomeMessageName: "Diego",
+      welcomeMessageLastName: "Zito",
+      drinkingAge: 61,
     };
   },
+  components: { MySuperCoolComponent, Diego },
 };
 </script>
 
@@ -296,5 +315,19 @@ a {
 }
 .available {
   color: green;
+}
+
+.rosalia-background {
+  background-color: blue;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.conditional {
+  display: flex;
+  flex-direction: column;
 }
 </style>
