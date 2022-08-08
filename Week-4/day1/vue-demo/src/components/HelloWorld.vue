@@ -104,10 +104,89 @@
           Inline Styling done throguh an object approach
         </h1>
 
-        <!-- Dynamically bind an object fethed from the data property -->
+        <!-- Dynamically bind an object fetched from the data property -->
         <h1 v-bind:style="styleObject">Style Object feteched from data</h1>
+
+        <!-- Dynamically bind arrays that are coming from the data object as an actual object passed as an array of objects inisde the HTML -->
+        <h1 v-bind:style="[baseStyleOject, successStyleObject]">
+          Injecting An array of objects inside the style tag via binding
+        </h1>
+        <h1 v-bind:style="[baseStyleOject, dangerStyleObject]">
+          Injecting An array of objects inside the style tag via binding
+        </h1>
+      </div>
+      <div id="short-hand-binding">
+        <!-- Dynamically binding inline attributes by using an object directly into the HTML -->
+        <!-- USING SHORT HAND -->
+        <h1
+          :style="{
+            padding: '20px',
+            color: textColor,
+            fontSize: textSize + 'px',
+          }"
+        >
+          Inline Styling done through an object approach with the sjort hand
+          syntax
+        </h1>
+
+        <!-- Conditionally binding a class attribute to an element depending if the dataProperty = true || false  -->
+        <!-- This only checks for 1 condition -->
+        <!-- USING SHORT HAND -->
+        <h1 :class="isPromoted && 'promoted'">
+          Promoted Movies using shortHand
+        </h1>
       </div>
     </div>
+    <div id="condition-rendering">
+      <div id="conditional-rendering-part-1">
+        <!-- Simple Approach using v-if first -->
+        <h1 v-if="num === 0">The number is zero</h1>
+        <!-- Expanding our condition by adding a v-else -->
+        <h1 v-else>The number is not zero</h1>
+      </div>
+      <div id="conditional-rendering-part-2">
+        <!-- More complex example using v-if, v-else-if and v-else -->
+        <h1 v-if="num === 0">The number is zero</h1>
+        <h1 v-else-if="num < 0">The number is negative</h1>
+        <h1 v-else-if="num > 0">The number is Positive</h1>
+        <h1 v-else>This is not a number</h1>
+        <!-- RULES: v-else or v-else-if must be placed after initially putting a v-if directive, if not you will get an error. -->
+      </div>
+      <div id="conditional-rendering-part-3">
+        <!-- What if we want to conditonally render more than one element in the same condition -->
+
+        <!-- Possbile solutions ? lets think ? -->
+        <!-- 1. add a v-if to each element, when we do this we have code dulication and as programmers, we should avoid this!  -->
+        <!-- <h1 v-if="display">Wu Tang Clan</h1>
+        <h1 v-if="display">Outkast</h1>
+        <h1 v-if="display">A tribe called quest</h1> -->
+
+        <!-- 2. Wrap all of the elements inside of a div in order to simplify -->
+        <!-- <div v-if="display">
+          <h1>Outkast</h1>
+          <h1>Wu Tang Clan</h1>
+          <h1>A tribe Called Quest</h1>
+        </div> -->
+
+        <!-- 3. Using a template tag to avoid inyecting extra elements into the DOM and also, the eelemtns are inyected without a parent tag that is invisible inside the HTML.  -->
+
+        <template v-if="display">
+          <h1>Outkast</h1>
+          <h1>Wu Tang Clan</h1>
+          <h1>A tribe Called Quest</h1>
+          <template v-if="display"><h5>Cesc</h5></template>
+        </template>
+      </div>
+    </div>
+
+    <!-- EJERCICIO DE CLASE
+    <div claseDinamicaMedianteUnBind = background>
+      <h1 inlineStylemedianteUnobejto>{{greet}}{{name}}{{lastName}}</h1>
+      Escribir condicion usando v-if y v-else-if y v-else 
+      Si eres mayor de 21 años - puedes tomar alcohol 
+      si eres menor de 21  - No puede tomar 
+      si eres mayor que 60 - Estas muy viejo para tomar 
+    </div> -->
   </div>
 </template>
 
@@ -157,6 +236,31 @@ export default {
         fontSize: "50px",
         padding: "20px",
       },
+
+      //Dinamically inject arrays within a style attribute
+      baseStyleOject: {
+        fontSize: "50px",
+        padding: "10px",
+      },
+      successStyleObject: {
+        color: "green",
+        backgroundColor: "lightgreen",
+        border: "1px solid darkgreen",
+        padding: "20px",
+      },
+      dangerStyleObject: {
+        color: "darkred",
+        backgroundColor: "red",
+        border: "1px solid darkred",
+        padding: "30px",
+      },
+
+      // Conditional Rendering using v-if, v-else, v-else-if directives inside Vue. For this specific example we are going to use a number property.
+      // num: "Wu Tang Clan", // Example using a string to showcase that this is not a number
+      num: 2,
+
+      // Conditionally render multiple elements inside the same condition
+      display: true,
     };
   },
 };
