@@ -137,7 +137,7 @@
         </h1>
       </div>
     </div>
-    <div id="condition-rendering">
+    <div id="conditional-rendering">
       <div id="conditional-rendering-part-1">
         <!-- Simple Approach using v-if first -->
         <h1 v-if="num === 0">The number is zero</h1>
@@ -275,7 +275,7 @@
           <button v-on:click="nameEvent = 'Lebron James'">
             Click me to change name
           </button>
-          <!-- Usando un click event -->
+          <!-- Usando un mouseoOver event -->
           <!-- <button v-on:mouseover="nameEvent = 'Lebron James'">
               Click me to change name
             </button> -->
@@ -482,7 +482,7 @@ export default {
     decrementWithParams(num) {
       this.countWithParams -= num;
     },
-
+    // Function to change name
     changeName(event) {
       this.nameEvent2 = "Dwayne Wade";
       console.log(event);
@@ -523,15 +523,6 @@ a {
   color: green;
 }
 
-.rosalia-background {
-  background-color: blue;
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .conditional {
   display: flex;
   flex-direction: column;
@@ -542,14 +533,12 @@ a {
   height: 250px;
 }
 
-.cesc-div {
-  min-width: 100%;
-  min-height: 150px;
-  background-color: blue;
-}
-
 .button-group {
   display: flex;
   flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  margin: auto;
+  gap: 1rem;
 }
 </style>

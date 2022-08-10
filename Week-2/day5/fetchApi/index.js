@@ -77,7 +77,7 @@ function addPost(preventForm) {
   let body = document.getElementById("body").value;
 
   // Using fetch to push to API
-  fetch("https://jsonplaceholder.typicode.com/posts", {
+  fetch("https://jsonplaceholder.typicode.com/comments", {
     method: "POST",
     headers: {
       Accept: "text/plain, application/json, */*",
