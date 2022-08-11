@@ -66,9 +66,6 @@ export default {
   @apply font-bold text-gray-700;
 }
 
-.card-container {
-}
-
 .card-sub-heading-genre {
   @apply text-xs mb-5 text-gray-700;
 }
