@@ -38,3 +38,31 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Good Music is always key!
+
+```sh
+Wu Tang Clan
+A tribe called quest
+Kendrick Lamar
+Outkast
+Dr. Dre
+N.W.A
+De La Soul 
+Ms. Lauryn Hill
+J. Cole 
+Guts
+Naughty By Nature
+People under the stairs
+Nujabes
+NAS
+KRS-One
+The Pharcyde
+Jurassic 5
+Gang starr
+Jay Z
+Mobb Depp
+Common
+Lil Supa
+[Hip Hop Spotify PLaylist](https://open.spotify.com/playlist/4vKftyhS1gQovakehVcq1u?si=a7a119382dfe40da)
+```
