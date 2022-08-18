@@ -20,6 +20,13 @@ Friday on August 19 we will look at how can we deploy this app to Vercels ecosys
 npm install
 ```
 
+## Set Up your Environment Variables from Supabase located at the root folder of the project
+
+```sh
+VITE_SUPABASE_URL
+VITE_SUPABASE_ANON_KEY 
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
