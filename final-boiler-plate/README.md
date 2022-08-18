@@ -64,5 +64,5 @@ Jay Z
 Mobb Depp
 Common
 Lil Supa
-[Hip Hop Spotify PLaylist](https://open.spotify.com/playlist/4vKftyhS1gQovakehVcq1u?si=a7a119382dfe40da)
+[Hip Hop Spotify PLaylist]("https://open.spotify.com/playlist/4vKftyhS1gQovakehVcq1u?si=a7a119382dfe40da")
 ```
