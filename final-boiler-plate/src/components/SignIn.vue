@@ -3,38 +3,10 @@
   <PersonalRouter :route="route" :buttonText="buttonText" />
   <p>Time to build up the Final Project!</p>
   <p class="wu-text">Wu Tang Forever</p>
-  <form @submit.prevent="signIn" class="form">
-    <input
-      class="input"
-      type="email"
-      placeholder="dave@wuTangfinancial.com"
-      v-model="email"
-      id="email"
-      style="width: 20rem"
-    />
-    <div class="">
-      <input
-        class="input"
-        :type="passwordFieldType"
-        onpaste="return false"
-        placeholder="************"
-        v-model="password"
-        style="width: 20rem"
-      />
-      <button @click.prevent="hidePassword = !hidePassword">
-        show password
-      </button>
-    </div>
-    <button class="button">Sign In</button>
-  </form>
-  <p v-if="errorMsg" style="color: red">
-    {{ errorMsg }}
-  </p>
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
-import { EyeIcon, EyeOffIcon } from "@heroicons/vue/outline";
 import PersonalRouter from "./PersonalRouter.vue";
 import { supabase } from "../supabase";
 import { useRouter } from "vue-router";
