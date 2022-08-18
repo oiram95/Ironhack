@@ -26,6 +26,7 @@ npm install
 VITE_SUPABASE_URL
 VITE_SUPABASE_ANON_KEY 
 ```
+#### Once you have added your environment variables, head to your .gitIgnore file located at the root folder and uncomment the .env file naming to avoid sharing any private access keys to your database
 
 ### Compile and Hot-Reload for Development
 
